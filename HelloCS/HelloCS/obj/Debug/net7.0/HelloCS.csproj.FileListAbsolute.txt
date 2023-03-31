@@ -1,0 +1,15 @@
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\bin\Debug\net7.0\HelloCS.exe
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\bin\Debug\net7.0\HelloCS.deps.json
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\bin\Debug\net7.0\HelloCS.runtimeconfig.json
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\bin\Debug\net7.0\HelloCS.dll
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\bin\Debug\net7.0\HelloCS.pdb
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.csproj.AssemblyReference.cache
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.GeneratedMSBuildEditorConfig.editorconfig
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.AssemblyInfoInputs.cache
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.AssemblyInfo.cs
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.csproj.CoreCompileInputs.cache
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.dll
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\refint\HelloCS.dll
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.pdb
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\HelloCS.genruntimeconfig.cache
+F:\Lap_trinh\C#\cs11dotnet7\HelloCS\HelloCS\obj\Debug\net7.0\ref\HelloCS.dll
