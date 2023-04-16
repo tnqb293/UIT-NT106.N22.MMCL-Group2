@@ -31,8 +31,8 @@ namespace Client_Sever_Chat_Multhreading_TCP
                 int port = int.Parse(tbPort.Text);
                 IPAddress ipaddress = IPAddress.Parse(tbIP.Text);
                 client.Connect(ipaddress, port);
-                thread = new Thread(new ThreadStart(ReceiveMessage));
-                thread.Start();
+                Task.Run(async () => await ReceiveMessageAsync());
+                //thread.Start();
                 lbMessage.Items.Add("Connect to server.");
             }
             catch (Exception ex)
@@ -40,30 +40,30 @@ namespace Client_Sever_Chat_Multhreading_TCP
                 lbMessage.Items.Add(ex.Message);
             }
         }
-        private void ReceiveMessage()
+        private async Task ReceiveMessageAsync()
         {
-            while(true)
+            while (true)
             {
-                    byte[] buffer = new byte[4096];
-                    NetworkStream clientStream = client.GetStream();
-                    int bytesRead = clientStream.Read(buffer, 0, buffer.Length);
-                    if(bytesRead == 0)
-                    {
-                        lbMessage.Invoke(new Action(() =>
-                        {
-                            lbMessage.Items.Add("Disconnected from server.");
-                        }));
-                        client.Close();
-                        thread.Abort();
-                        
-                        break;
-                    }
+                byte[] buffer = new byte[4096];
+                NetworkStream clientStream = client.GetStream();
+                int bytesRead = await clientStream.ReadAsync(buffer, 0, buffer.Length);
+
+                if (bytesRead == 0)
+                {
                     lbMessage.Invoke(new Action(() =>
                     {
-                        lbMessage.Items.Add(Encoding.UTF8.GetString(buffer, 0, bytesRead));
+                        lbMessage.Items.Add("Disconnected from server.");
                     }));
-        
-                
+
+                    this.Close();
+                    //thread.Abort();
+                    break;
+                }
+
+                lbMessage.Invoke(new Action(() =>
+                {
+                    lbMessage.Items.Add(Encoding.UTF8.GetString(buffer, 0, bytesRead));
+                }));
             }
         }
 
@@ -82,20 +82,19 @@ namespace Client_Sever_Chat_Multhreading_TCP
             }
         }
 
-        private void btnSend_Click(object sender, EventArgs e)
+        private async void btnSend_Click(object sender, EventArgs e)
         {
             try
             {
-                if(tbSend.Text != string.Empty)
+                if (tbSend.Text != string.Empty)
                 {
                     lbMessage.Items.Add($"You: {tbSend.Text}");
                     byte[] buffer = Encoding.UTF8.GetBytes($"{tbName.Text}: {tbSend.Text}");
                     NetworkStream clientStream = client.GetStream();
-                    clientStream.Write(buffer, 0, buffer.Length);
-                    clientStream.Flush();
+                    await clientStream.WriteAsync(buffer, 0, buffer.Length);
+                    await clientStream.FlushAsync();
                     tbSend.Clear();
                 }
-                
             }
             catch (Exception ex)
             {

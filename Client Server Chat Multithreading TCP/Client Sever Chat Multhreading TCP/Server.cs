@@ -56,62 +56,50 @@ namespace Client_Sever_Chat_Multhreading_TCP
                 lbMessage.Items.Add($"{ex.Message}");
             }
         }
-        private void AcceptClient()
+        private async void AcceptClient()
         {
-                // Chấp nhận kết nối từ Client và tạo TcpClient mới để xử lý kết nối
             try
             {
                 if (serverListener != null)
                 {
                     while (true)
                     {
-                        TcpClient client = serverListener.AcceptTcpClient();
+                        TcpClient client = await serverListener.AcceptTcpClientAsync();
                         clients.Add(client);
                         Thread thread = new Thread(new ParameterizedThreadStart(HandleClient));
                         thread.Start(client);
-                        lbMessage.Invoke(new Action(() =>
-                        {
-                            lbMessage.Items.Add("Client connected.");
-                        }));
+                        lbMessage.Invoke(new Action(() => { lbMessage.Items.Add("Client connected."); }));
                     }
                 }
             }
-            catch
-            {
-                
-            }
-            
-           
+            catch { }
         }
-        private void HandleClient(object obj)
+        private async void HandleClient(object obj)
         {
             TcpClient client = (TcpClient)obj;
             NetworkStream clientStream = client.GetStream();
             byte[] message = new byte[4096];
             int bytesRead;
             string mess = string.Empty;
+
             try
             {
                 while (true)
                 {
-                    // Nhận tin nhắn từ Client và gửi đến tất cả các Client khác
                     bytesRead = 0;
                     try
                     {
-                        bytesRead = clientStream.Read(message, 0, 4096);
+                        bytesRead = await clientStream.ReadAsync(message, 0, 4096);
                         mess = Encoding.UTF8.GetString(message, 0, bytesRead);
                     }
                     catch
                     {
                         break;
                     }
+
                     if (mess.Contains("Logout"))
                     {
-                        // Nếu Client ngắt kết nối, đóng kết nối và xóa khỏi danh sách clients
-                        lbMessage.Invoke(new Action(() =>
-                        {
-                            lbMessage.Items.Add("Client disconnected");
-                        }));
+                        lbMessage.Invoke(new Action(() => { lbMessage.Items.Add("Client disconnected"); }));
                         client.Close();
                         clients.Remove(client);
                         break;
@@ -121,28 +109,22 @@ namespace Client_Sever_Chat_Multhreading_TCP
                         string data = Encoding.UTF8.GetString(message, 0, bytesRead);
                         string dataInfor = data;
                         SetText(dataInfor);
-                        // Gửi tin nhắn đến tất cả các Client khác
 
                         foreach (TcpClient c in clients)
                         {
                             if (c != client && c.Connected)
                             {
                                 NetworkStream stream = c.GetStream();
-                                stream.Write(message, 0, bytesRead);
-                                stream.Flush();
+                                await stream.WriteAsync(message, 0, bytesRead);
+                                await stream.FlushAsync();
                             }
                         }
                     }
-                    
                 }
             }
             catch (Exception ex)
             {
-                lbMessage.Invoke(new Action(() =>
-                {
-                    lbMessage.Items.Add(ex.Message);
-                }));
-
+                lbMessage.Invoke(new Action(() => { lbMessage.Items.Add(ex.Message); }));
             }
         }
         private void SetText(string text)
