@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abc\\Desktop\\C#\\Lab3-21521865-Tran Nguyen Quoc Bao\\Lab3-21521865-Tran Nguyen Quoc Bao\\Bai3\\Bai3.csproj": {}
+    "F:\\NT106\\UIT-NT106.N22.MMCL-Group2\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\Bai3\\Bai3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abc\\Desktop\\C#\\Lab3-21521865-Tran Nguyen Quoc Bao\\Lab3-21521865-Tran Nguyen Quoc Bao\\Bai3\\Bai3.csproj": {
+    "F:\\NT106\\UIT-NT106.N22.MMCL-Group2\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\Bai3\\Bai3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abc\\Desktop\\C#\\Lab3-21521865-Tran Nguyen Quoc Bao\\Lab3-21521865-Tran Nguyen Quoc Bao\\Bai3\\Bai3.csproj",
+        "projectUniqueName": "F:\\NT106\\UIT-NT106.N22.MMCL-Group2\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\Bai3\\Bai3.csproj",
         "projectName": "Bai3",
-        "projectPath": "C:\\Users\\abc\\Desktop\\C#\\Lab3-21521865-Tran Nguyen Quoc Bao\\Lab3-21521865-Tran Nguyen Quoc Bao\\Bai3\\Bai3.csproj",
-        "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abc\\Desktop\\C#\\Lab3-21521865-Tran Nguyen Quoc Bao\\Lab3-21521865-Tran Nguyen Quoc Bao\\Bai3\\obj\\",
+        "projectPath": "F:\\NT106\\UIT-NT106.N22.MMCL-Group2\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\Bai3\\Bai3.csproj",
+        "packagesPath": "C:\\Users\\Flinta\\.nuget\\packages\\",
+        "outputPath": "F:\\NT106\\UIT-NT106.N22.MMCL-Group2\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\NT106.N22.MMCL.1-Lab03-21521901-21522659-21521865\\Bai3\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Flinta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
