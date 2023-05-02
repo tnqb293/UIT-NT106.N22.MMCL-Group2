@@ -1,0 +1,16 @@
+C:\Users\clear\source\repos\Lab03\bin\Debug\Lab03.exe.config
+C:\Users\clear\source\repos\Lab03\bin\Debug\Lab03.exe
+C:\Users\clear\source\repos\Lab03\bin\Debug\Lab03.pdb
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.csproj.AssemblyReference.cache
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.csproj.SuggestedBindingRedirects.cache
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.Properties.Resources.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.csproj.GenerateResource.cache
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.csproj.CoreCompileInputs.cache
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.exe
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.pdb
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fChatRoom.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fIndex.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fUDPClient.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fUDPServer.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fUDPApp.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fTCPTelnetServer.resources
