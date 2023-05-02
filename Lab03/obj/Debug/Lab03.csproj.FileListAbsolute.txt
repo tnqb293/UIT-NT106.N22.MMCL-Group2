@@ -14,3 +14,6 @@ C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fUDPClient.resources
 C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fUDPServer.resources
 C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fUDPApp.resources
 C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fTCPTelnetServer.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fTCPApp.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fTCPClient.resources
+C:\Users\clear\source\repos\Lab03\obj\Debug\Lab03.fTCPListener.resources

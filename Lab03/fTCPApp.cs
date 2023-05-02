@@ -16,5 +16,17 @@ namespace Lab03
         {
             InitializeComponent();
         }
+
+        private void btnTCPServer_Click(object sender, EventArgs e)
+        {
+            fTCPListener tcpListener = new fTCPListener();
+            tcpListener.Show();
+        }
+
+        private void btnTCPClient_Click(object sender, EventArgs e)
+        {
+            fTCPClient tcpClient = new fTCPClient();
+            tcpClient.Show();
+        }
     }
 }

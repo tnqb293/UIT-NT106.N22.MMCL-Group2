@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -91,23 +106,29 @@
     <Compile Include="fUDPServer.Designer.cs">
       <DependentUpon>fUDPServer.cs</DependentUpon>
     </Compile>
-    <Compile Include="TCPClient.cs">
+    <Compile Include="fTCPClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TCPClient.Designer.cs">
-      <DependentUpon>TCPClient.cs</DependentUpon>
+    <Compile Include="fTCPClient.Designer.cs">
+      <DependentUpon>fTCPClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="TCPListener.cs">
+    <Compile Include="fTCPListener.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TCPListener.Designer.cs">
-      <DependentUpon>TCPListener.cs</DependentUpon>
+    <Compile Include="fTCPListener.Designer.cs">
+      <DependentUpon>fTCPListener.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fChatRoom.resx">
       <DependentUpon>fChatRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fIndex.resx">
       <DependentUpon>fIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTCPApp.resx">
+      <DependentUpon>fTCPApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTCPClient.resx">
+      <DependentUpon>fTCPClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTCPTelnetServer.resx">
       <DependentUpon>fTCPTelnetServer.cs</DependentUpon>
@@ -130,8 +151,8 @@
     <EmbeddedResource Include="fUDPApp.resx">
       <DependentUpon>fUDPApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TCPListener.resx">
-      <DependentUpon>TCPListener.cs</DependentUpon>
+    <EmbeddedResource Include="fTCPListener.resx">
+      <DependentUpon>fTCPListener.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -145,6 +166,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
