@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "EUF25GzKApLAxmdLp3CMkRVE84crzba+LG0EGAnF6MFwQIWkDlSNJxO1AcywH2KfSF3le629Y3ayTTkHCyoNcA==",
+  "success": true,
+  "projectFilePath": "F:\\NT106\\UIT-NT106.N22.MMCL-Group2\\NT106.N22.MMCL.1-Lab04-21521901-21522659-21521865\\Bai2\\Bai2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Flinta\\.nuget\\packages\\openpop.net\\2.0.6.1120\\openpop.net.2.0.6.1120.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'OpenPop.NET 2.0.6.1120' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "OpenPop.NET",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
